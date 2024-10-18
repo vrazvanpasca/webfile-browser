@@ -49,31 +49,6 @@ export const App = () => {
     setSelectedFile(file);
   };
 
-  // // Function to add a file/folder to a specific folder
-  // const handleAddNode = (folderId: string, isFile: boolean) => {
-  //   const newId = Date.now().toString(); // Simple ID generation
-  //   const newNode: FileNode = {
-  //     id: newId,
-  //     name: isFile ? `NewFile${newId}.txt` : `NewFolder${newId}`,
-  //     type: isFile ? "file" : "folder",
-  //     children: isFile ? undefined : [],
-  //   };
-
-  //   // Recursively add new node to the correct folder
-  //   const addNode = (nodes: FileNode[]): FileNode[] => {
-  //     return nodes.map((node) => {
-  //       if (node.id === folderId && node.type === "folder") {
-  //         return { ...node, children: [...(node.children || []), newNode] };
-  //       } else if (node.children) {
-  //         return { ...node, children: addNode(node.children) };
-  //       }
-  //       return node;
-  //     });
-  //   };
-
-  //   setFileData(addNode(fileData));
-  // };
-
   const handleAddNode = (
     folderId: string,
     fileType: "txt" | "json" | "png" | "folder"
